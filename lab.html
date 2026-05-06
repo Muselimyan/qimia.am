@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="hy"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Լաբորատորիա</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Կարդալ.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="icon" href="images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="theme-color" content="#478ac9">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+  <style>
+    /* Make header visible and prominent */
+    .u-header {
+      background-color: #e5e7eb !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+      z-index: 1000 !important;
+    }
+    
+    /* Push the lab module below the sticky header */
+    #root {
+      margin-top: 80px !important;
+    }
+    
+    /* Reduce the large title text size in the lab header */
+    #root > div > div > header h1 {
+      font-size: 1.75rem !important;
+    }
+    
+    /* Reduce section titles: Ռեակցիայի Պարամետրեր, Բյուրետի Կառավարում, etc */
+    #root h2 {
+      font-size: 1.125rem !important;
+    }
+    
+    /* Reduce graph title: Տիտրման Կոր (pH / Ծավալ) */
+    #root h3 {
+      font-size: 1rem !important;
+    }
+    
+    @media (max-width: 768px) {
+      #root > div > div > header h1 {
+        font-size: 1.25rem !important;
+      }
+      #root h2 {
+        font-size: 1rem !important;
+      }
+      #root h3 {
+        font-size: 0.875rem !important;
+      }
+    }
+  </style>
+</head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en"><header class="u-clearfix u-grey-5 u-header u-sticky u-header" id="sec-7663"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <nav class="u-align-center u-menu u-menu-one-level u-offcanvas u-menu-1" data-responsive-from="XS">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-active-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-custom-color-1 u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-hover-custom-color-2 u-nav-link u-text-active-custom-color-1 u-text-custom-color-2 u-text-hover-custom-color-3" href="./" style="padding: 10px 20px;">Գլխավոր</a>
+</li><li class="u-nav-item"><a class="u-button-style u-hover-custom-color-2 u-nav-link u-text-active-custom-color-1 u-text-custom-color-2 u-text-hover-custom-color-3" href="Կարդալ.html" style="padding: 10px 20px;">Կարդալ</a>
+</li><li class="u-nav-item"><a class="u-button-style u-hover-custom-color-2 u-nav-link u-text-active-custom-color-1 u-text-custom-color-2 u-text-hover-custom-color-3" href="Երաշխավորագրեր.html" style="padding: 10px 20px;">Երաշխավորագրեր</a>
+</li><li class="u-nav-item"><a class="u-button-style u-hover-custom-color-2 u-nav-link u-text-active-custom-color-1 u-text-custom-color-2 u-text-hover-custom-color-3" href="Գնել.html" style="padding: 10px 20px;">Գնել</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-container-style u-custom-color-1 u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Գլխավոր</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Կարդալ.html">Կարդալ</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Երաշխավորագրեր.html">Երաշխավորագրեր</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Գնել.html">Գնել</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-custom-color-2 u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+    const Play = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><polygon points="5,3 19,12 5,21"/></svg>;
+    const Square = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><rect x="3" y="3" width="18" height="18" rx="2"/></svg>;
+    const Droplet = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>;
+    const RotateCcw = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.95"/></svg>;
+    const Activity = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>;
+    const Settings2 = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>;
+    const Beaker = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/><path d="M6 14h12"/></svg>;
+    const Bot = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>;
+    const Sparkles = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>;
+    const X = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
+    const Send = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>;
+    const FileText = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>;
+
+    // --- ՄԱԹԵՄԱՏԻԿԱԿԱՆ ԵՎ ՔԻՄԻԱԿԱՆ ՀԱՍՏԱՏՈՒՆՆԵՐ ---
+    const Kw = 1.0e-14;
+    const pKw = 14.0;
+    const Ka_Acetic = 1.8e-5;
+    const Kb_Ammonia = 1.8e-5;
+
+    const TITRATION_MODES = {
+      SA_SB: { id: 'SA_SB', name: 'Ուժեղ թթու - Ուժեղ հիմք (HCl + NaOH)' },
+      SB_SA: { id: 'SB_SA', name: 'Ուժեղ հիմք - Ուժեղ թթու (NaOH + HCl)' },
+      WA_SB: { id: 'WA_SB', name: 'Թույլ թթու - Ուժեղ հիմք (CH3COOH + NaOH)' },
+      WB_SA: { id: 'WB_SA', name: 'Թույլ հիմք - Ուժեղ թթու (NH3 + HCl)' },
+    };
+
+    const INDICATORS = {
+      none: { id: 'none', name: 'Առանց ինդիկատորի' },
+      phenolphthalein: { id: 'phenolphthalein', name: 'Ֆենոլֆտալեին (pH 8.2 - 10.0)' },
+      methylOrange: { id: 'methylOrange', name: 'Մեթիլօրանժ (pH 3.1 - 4.4)' },
+      litmus: { id: 'litmus', name: 'Լակմուս (pH 4.5 - 8.3)' },
+    };
+
+    // --- ՁԱՅՆԱՅԻՆ ԷՖԵԿՏԻ ԳԵՆԵՐԱՏՈՐ ---
+    let sharedAudioCtx = null;
+    const getAudioContext = () => {
+      if (!sharedAudioCtx) {
+        sharedAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (sharedAudioCtx.state === 'suspended') {
+        sharedAudioCtx.resume();
+      }
+      return sharedAudioCtx;
+    };
+
+    const playDripSound = () => {
+      try {
+        const audioCtx = getAudioContext();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(800, audioCtx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(1500, audioCtx.currentTime + 0.05);
+        gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.05);
+      } catch (e) {}
+    };
+
+    const playErrorSound = () => {
+      try {
+        const audioCtx = getAudioContext();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        oscillator.type = 'sawtooth';
+        oscillator.frequency.setValueAtTime(150, audioCtx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.3);
+        gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.3);
+      } catch (e) {}
+    };
+
+    const playBellSound = () => {
+      try {
+        const audioCtx = getAudioContext();
+        const t = audioCtx.currentTime;
+        const freqs = [880, 1108.73, 1318.51];
+        freqs.forEach((freq, i) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, t);
+          gain.gain.setValueAtTime(0, t);
+          gain.gain.linearRampToValueAtTime(0.15 / (i + 1), t + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.01, t + 1.5 + (i * 0.2));
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(t);
+          osc.stop(t + 2.5);
+        });
+      } catch (e) {}
+    };
+
+    // --- ԳՈՒՅՆԵՐԻ ԵՎ ՏԻՐՈՒՅԹՆԵՐԻ ՀԱՇՎԱՐԿԻՉ ---
+    const getIndicatorColor = (pH, indicator) => {
+      const blend = (c1, c2, ratio) => {
+        ratio = Math.max(0, Math.min(1, ratio));
+        return `rgb(${Math.round(c1[0] + (c2[0] - c1[0]) * ratio)}, 
+                    ${Math.round(c1[1] + (c2[1] - c1[1]) * ratio)}, 
+                    ${Math.round(c1[2] + (c2[2] - c1[2]) * ratio)})`;
+      };
+      const colorless = [230, 245, 255];
+      if (indicator === 'phenolphthalein') {
+        if (pH < 8.2) return `rgb(${colorless.join(',')})`;
+        if (pH > 10.0) return 'rgb(255, 0, 127)';
+        return blend(colorless, [255, 0, 127], (pH - 8.2) / 1.8);
+      }
+      if (indicator === 'methylOrange') {
+        const red = [255, 40, 40];
+        const yellow = [255, 215, 0];
+        if (pH < 3.1) return `rgb(${red.join(',')})`;
+        if (pH > 4.4) return `rgb(${yellow.join(',')})`;
+        return blend(red, yellow, (pH - 3.1) / 1.3);
+      }
+      if (indicator === 'litmus') {
+        const red = [255, 50, 50];
+        const blue = [50, 50, 255];
+        if (pH < 4.5) return `rgb(${red.join(',')})`;
+        if (pH > 8.3) return `rgb(${blue.join(',')})`;
+        return blend(red, blue, (pH - 4.5) / 3.8);
+      }
+      return `rgb(${colorless.join(',')})`;
+    };
+
+    const getIndicatorBand = (ind) => {
+      switch (ind) {
+        case 'phenolphthalein': return { min: 8.2, max: 10.0, color: 'rgba(236, 72, 153, 0.25)', label: '8.2 - 10.0' };
+        case 'methylOrange': return { min: 3.1, max: 4.4, color: 'rgba(245, 158, 11, 0.25)', label: '3.1 - 4.4' };
+        case 'litmus': return { min: 4.5, max: 8.3, color: 'rgba(168, 85, 247, 0.25)', label: '4.5 - 8.3' };
+        default: return null;
+      }
+    };
+
+    // --- AI (GEMINI API) ԻՆՏԵԳՐԱՑԻԱ ---
+    const apiKey = "";
+
+    const callGeminiAPI = async (prompt) => {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+      const delay = (ms) => new Promise(res => setTimeout(res, ms));
+      const payload = {
+        contents: [{ parts: [{ text: prompt }] }],
+        systemInstruction: {
+          parts: [{ text: "Դուք քիմիայի պրոֆեսոր եք: Օգնում եք աշակերտներին վիրտուալ լաբորատորիայում: Պատասխանեք հայերենով, եղեք քաջալերող, հակիրճ և գիտականորեն ճշգրիտ:" }]
+        }
+      };
+      for (let attempt = 0; attempt < 5; attempt++) {
+        try {
+          const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error(`API Error ${res.status}`);
+          const data = await res.json();
+          return data.candidates?.[0]?.content?.parts?.[0]?.text || "Ներողություն, չկարողացա ձևակերպել պատասխանը:";
+        } catch (err) {
+          if (attempt === 4) return "⚠️ Ցանցային կամ սերվերի սխալ: Խնդրում ենք փորձել ավելի ուշ:";
+          await delay(Math.pow(2, attempt) * 1000);
+        }
+      }
+    };
+
+    const formatAiText = (text) => {
+      return text.split('\n').map((line, i) => {
+        const bolded = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        return <p key={i} className="mb-2 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: bolded }} />;
+      });
+    };
+
+    function App() {
+      const [mode, setMode] = useState('SA_SB');
+      const [indicator, setIndicator] = useState('phenolphthalein');
+      const [indicatorError, setIndicatorError] = useState(false);
+
+      const [analyteVol, setAnalyteVol] = useState(25.0);
+      const [analyteConc, setAnalyteConc] = useState(0.1);
+      const [titrantConc, setTitrantConc] = useState(0.1);
+
+      const [addedVol, setAddedVol] = useState(0.0);
+      const [isPlaying, setIsPlaying] = useState(false);
+      const [flowRate, setFlowRate] = useState(0.1);
+
+      const [dataPoints, setDataPoints] = useState([]);
+      const [currentPH, setCurrentPH] = useState(7.0);
+
+      const [isAiOpen, setIsAiOpen] = useState(false);
+      const [aiLoading, setAiLoading] = useState(false);
+      const [aiResponse, setAiResponse] = useState("");
+      const [aiQuery, setAiQuery] = useState("");
+      const [dropAnim, setDropAnim] = useState(false);
+
+      const hasPlayedBell = useRef(false);
+
+      const getRecommendedIndicators = (m) => {
+        switch (m) {
+          case 'SA_SB': return ['litmus', 'phenolphthalein'];
+          case 'SB_SA': return ['litmus', 'methylOrange'];
+          case 'WA_SB': return ['phenolphthalein'];
+          case 'WB_SA': return ['methylOrange'];
+          default: return [];
+        }
+      };
+
+      useEffect(() => {
+        if (indicator === 'none') { setIndicatorError(false); return; }
+        const recs = getRecommendedIndicators(mode);
+        if (!recs.includes(indicator)) { setIndicatorError(true); playErrorSound(); }
+        else { setIndicatorError(false); }
+      }, [mode, indicator]);
+
+      const calculatePH = (vAdded) => {
+        const Va = parseFloat(analyteVol);
+        const Ca = parseFloat(analyteConc);
+        const Ct = parseFloat(titrantConc);
+        const Vt = parseFloat(vAdded);
+        const Vtotal = Va + Vt;
+        if (Vtotal === 0) return 7;
+        const nAnalyte = Va * Ca;
+        const nTitrant = Vt * Ct;
+        let calcPH = 7.0;
+        switch (mode) {
+          case 'SA_SB':
+            if (nAnalyte > nTitrant) { const H_conc = (nAnalyte - nTitrant) / Vtotal; calcPH = -Math.log10(H_conc); }
+            else if (nTitrant > nAnalyte) { const OH_conc = (nTitrant - nAnalyte) / Vtotal; calcPH = pKw + Math.log10(OH_conc); }
+            else calcPH = 7.0;
+            break;
+          case 'SB_SA':
+            if (nAnalyte > nTitrant) { const OH_conc = (nAnalyte - nTitrant) / Vtotal; calcPH = pKw + Math.log10(OH_conc); }
+            else if (nTitrant > nAnalyte) { const H_conc = (nTitrant - nAnalyte) / Vtotal; calcPH = -Math.log10(H_conc); }
+            else calcPH = 7.0;
+            break;
+          case 'WA_SB':
+            if (Vt === 0) calcPH = 0.5 * (-Math.log10(Ka_Acetic) - Math.log10(Ca));
+            else if (nAnalyte > nTitrant) calcPH = -Math.log10(Ka_Acetic) + Math.log10(nTitrant / (nAnalyte - nTitrant));
+            else if (Math.abs(nAnalyte - nTitrant) < 1e-6) { const saltConc = nAnalyte / Vtotal; const OH_conc = Math.sqrt((Kw / Ka_Acetic) * saltConc); calcPH = pKw + Math.log10(OH_conc); }
+            else { const OH_conc = (nTitrant - nAnalyte) / Vtotal; calcPH = pKw + Math.log10(OH_conc); }
+            break;
+          case 'WB_SA':
+            if (Vt === 0) calcPH = pKw - (0.5 * (-Math.log10(Kb_Ammonia) - Math.log10(Ca)));
+            else if (nAnalyte > nTitrant) calcPH = pKw - (-Math.log10(Kb_Ammonia) + Math.log10(nTitrant / (nAnalyte - nTitrant)));
+            else if (Math.abs(nAnalyte - nTitrant) < 1e-6) { const saltConc = nAnalyte / Vtotal; const H_conc = Math.sqrt((Kw / Kb_Ammonia) * saltConc); calcPH = -Math.log10(H_conc); }
+            else { const H_conc = (nTitrant - nAnalyte) / Vtotal; calcPH = -Math.log10(H_conc); }
+            break;
+          default: break;
+        }
+        return Math.max(0, Math.min(14, calcPH));
+      };
+
+      useEffect(() => {
+        if (addedVol === 0 && dataPoints.length === 0) {
+          const initialPH = calculatePH(0);
+          setCurrentPH(initialPH);
+          setDataPoints([{ v: 0, ph: initialPH }]);
+        }
+        let interval;
+        if (isPlaying) {
+          interval = setInterval(() => {
+            setAddedVol((prev) => {
+              const nextV = prev + parseFloat(flowRate);
+              if (nextV > 50) { setIsPlaying(false); return 50; }
+              const newPH = calculatePH(nextV);
+              setCurrentPH(newPH);
+              setDataPoints((pts) => [...pts, { v: nextV, ph: newPH }]);
+              const Veq = (parseFloat(analyteVol) * parseFloat(analyteConc)) / parseFloat(titrantConc);
+              if (!hasPlayedBell.current && prev < Veq && nextV >= Veq) { playBellSound(); hasPlayedBell.current = true; }
+              if (flowRate >= 0.5) { if (Math.random() > 0.5) playDripSound(); } else { playDripSound(); }
+              return nextV;
+            });
+          }, flowRate >= 0.5 ? 50 : 200);
+        }
+        return () => clearInterval(interval);
+      }, [isPlaying, flowRate, mode, analyteVol, analyteConc, titrantConc]);
+
+      const handleAddDrop = () => {
+        if (addedVol >= 50) return;
+        const nextV = addedVol + 0.05;
+        const newPH = calculatePH(nextV);
+        const Veq = (parseFloat(analyteVol) * parseFloat(analyteConc)) / parseFloat(titrantConc);
+        if (!hasPlayedBell.current && addedVol < Veq && nextV >= Veq) { playBellSound(); hasPlayedBell.current = true; }
+        playDripSound();
+        setAddedVol(nextV);
+        setCurrentPH(newPH);
+        setDataPoints(prev => [...prev, { v: nextV, ph: newPH }]);
+        setDropAnim(true);
+        setTimeout(() => setDropAnim(false), 400);
+      };
+
+      const handleReset = () => {
+        setIsPlaying(false);
+        setAddedVol(0);
+        hasPlayedBell.current = false;
+        const initialPH = calculatePH(0);
+        setCurrentPH(initialPH);
+        setDataPoints([{ v: 0, ph: initialPH }]);
+        setAiResponse("");
+      };
+
+      const handleGenerateReport = async () => {
+        setAiLoading(true);
+        setAiResponse("");
+        const Veq = ((parseFloat(analyteVol) * parseFloat(analyteConc)) / parseFloat(titrantConc)).toFixed(2);
+        const modeName = TITRATION_MODES[mode].name;
+        const prompt = `Խնդրում եմ գրել շատ կարճ լաբորատոր հաշվետվություն այս տիտրման փորձի համար.
+    - Տեսակը: ${modeName}
+    - Անալիտ: ${analyteVol} մլ, ${analyteConc} Մ
+    - Տիտրանտ: ${titrantConc} Մ
+    - Էկվիվալենտության կետ (հաշվարկված): ${Veq} մլ
+    - Ընտրված ինդիկատոր: ${INDICATORS[indicator].name}
+    
+    Ներառեք միայն 3 կետ՝ 1. Նպատակը, 2. Պրոցեսի նկարագրություն (ինչպես է փոխվում pH-ը), 3. Եզրակացություն:`;
+        const response = await callGeminiAPI(prompt);
+        setAiResponse(response);
+        setAiLoading(false);
+      };
+
+      const handleAskQuestion = async () => {
+        if (!aiQuery.trim()) return;
+        const currentQ = aiQuery;
+        setAiQuery("");
+        setAiLoading(true);
+        setAiResponse(`**Ձեր հարցը:** ${currentQ}\n\n...մտածում եմ...`);
+        const Veq = ((parseFloat(analyteVol) * parseFloat(analyteConc)) / parseFloat(titrantConc)).toFixed(2);
+        const prompt = `Աշակերտի հարցը: "${currentQ}"
+    
+    Համատեքստ փորձից.
+    Տիտրում ենք: ${TITRATION_MODES[mode].name}
+    Ընթացիկ ավելացված ծավալը: ${addedVol.toFixed(2)} մլ
+    Ընթացիկ pH: ${currentPH.toFixed(2)}
+    Էկվիվալենտության կետ: ${Veq} մլ`;
+        const response = await callGeminiAPI(prompt);
+        setAiResponse(`**Ձեր հարցը:** ${currentQ}\n\n**Պրոֆեսորի Պատասխանը:**\n${response}`);
+        setAiLoading(false);
+      };
+
+      const currentColor = getIndicatorColor(currentPH, indicator);
+
+      const svgWidth = 450;
+      const svgHeight = 280;
+      const margin = { top: 20, right: 30, bottom: 50, left: 40 };
+      const graphWidth = svgWidth - margin.left - margin.right;
+      const graphHeight = svgHeight - margin.top - margin.bottom;
+
+      const pointsString = dataPoints.map(p => {
+        const x = margin.left + (p.v / 50) * graphWidth;
+        const y = margin.top + graphHeight - (p.ph / 14) * graphHeight;
+        return `${x},${y}`;
+      }).join(' ');
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-100 to-purple-100 text-slate-800 p-4 md:p-6 font-sans selection:bg-fuchsia-200">
+          <style>{`
+            @keyframes dropFall {
+              0% { transform: translateY(0px) scale(0.8); opacity: 1; }
+              70% { transform: translateY(60px) scale(1); opacity: 1; }
+              100% { transform: translateY(80px) scale(0.5); opacity: 0; }
+            }
+          `}</style>
+          <div className="max-w-[1200px] mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white">
+
+            <header className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white p-6 md:p-8 shadow-md relative overflow-hidden">
+              <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              <h1 className="text-3xl font-extrabold flex items-center gap-4 relative z-10 drop-shadow-md">
+                <div className="p-2 bg-white/20 rounded-xl backdrop-blur-sm">
+                  <Activity className="w-8 h-8 text-cyan-200" />
+                </div>
+                Տիտրման Վիրտուալ Լաբորատորիա
+              </h1>
+              <p className="text-indigo-100 text-sm md:text-base mt-2 relative z-10 max-w-2xl">
+                Ինտերակտիվ pH մոդելավորում՝ քիմիական կինետիկայի, հիդրոլիզի և իրական ժամանակում տիտրման կորերի կառուցմամբ:
+              </p>
+            </header>
+
+            <div className="flex flex-col lg:flex-row min-h-[600px]">
+
+              <div className="w-full lg:w-5/12 bg-gradient-to-b from-slate-50 to-slate-200/50 p-6 flex flex-col items-center justify-center border-r border-indigo-100 relative shadow-[inset_-10px_0_20px_rgba(0,0,0,0.02)]">
+
+                <div className="absolute top-6 left-6 bg-slate-900 border-t-4 border-t-cyan-500 rounded-xl p-3 shadow-2xl z-30 transform hover:scale-105 transition-transform cursor-default">
+                  <div className="text-xs text-slate-400 mb-1 uppercase tracking-widest font-bold">pH Ցուցիչ</div>
+                  <div className="text-cyan-400 font-mono text-4xl font-bold tracking-widest bg-black/50 p-2 rounded-lg shadow-inner flex items-center gap-2">
+                    {currentPH.toFixed(2)}
+                    {isPlaying && <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>}
+                  </div>
+                </div>
+
+                <div className="relative mt-28 flex flex-col items-center h-[550px]">
+
+                  <div className="relative w-14 h-72 rounded-t-sm border-x-2 border-b-2 border-slate-300 bg-gradient-to-r from-white/80 via-white/20 to-slate-300/40 backdrop-blur-sm shadow-[inset_0_0_15px_rgba(255,255,255,0.8)] z-10 flex justify-center">
+                    <div className="absolute top-4 bottom-4 left-0 w-full z-20">
+                      {Array.from({length: 51}).map((_, i) => (
+                        <div key={i} className="absolute w-full flex items-center" style={{top: `${(i/50)*100}%`}}>
+                          <div className={`h-[1px] bg-slate-800 ${i % 5 === 0 ? (i % 10 === 0 ? 'w-4' : 'w-2.5') : 'w-1.5'}`} />
+                          {i % 10 === 0 && <span className="text-[10px] font-bold text-slate-800 ml-1 leading-none translate-y-[-50%] drop-shadow-md">{i}</span>}
+                        </div>
+                      ))}
+                    </div>
+                    <div
+                      className="absolute bottom-0 left-0 right-0 bg-blue-400/60 transition-all duration-300"
+                      style={{ height: `${((50 - addedVol) / 50) * 100}%`, boxShadow: 'inset 0 10px 10px -10px rgba(0,0,0,0.3)' }}
+                    >
+                      <div className="absolute top-0 left-0 right-0 h-2.5 bg-blue-300/40 rounded-[100%] border-[2px] border-b-blue-600 border-t-blue-300 transform -translate-y-1/2 shadow-[inset_0_-1px_3px_rgba(0,0,0,0.3)]"></div>
+                    </div>
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-r from-slate-200 to-slate-400 border border-slate-400 z-10 flex items-center justify-center rounded-sm shadow-md">
+                      <div className={`w-10 h-3 bg-red-500 border border-red-700 rounded-full transition-transform duration-300 shadow-lg ${isPlaying ? 'rotate-90' : 'rotate-0'}`} />
+                    </div>
+                  </div>
+
+                  <div className="h-20 w-2 relative flex justify-center z-20 overflow-hidden">
+                    {isPlaying && flowRate >= 0.5 ? (
+                      <div className="absolute top-0 w-1 h-full bg-blue-400/60 shadow-[0_0_5px_rgba(96,165,250,0.8)] origin-top animate-[pulse_0.1s_ease-in-out_infinite]" />
+                    ) : (isPlaying || dropAnim) ? (
+                      <div
+                        className="absolute top-0 w-2 h-3 bg-blue-400/80 rounded-[50%_50%_50%_50%_/_60%_60%_40%_40%] shadow-sm"
+                        style={{ animation: `dropFall ${isPlaying ? (flowRate === 0.2 ? '0.2s' : '0.4s') : '0.4s'} linear infinite` }}
+                      />
+                    ) : null}
+                  </div>
+
+                  <div className="relative z-10 -mt-2 flex flex-col items-center">
+                    <div className="absolute -top-16 left-1/2 ml-5 w-2.5 h-40 bg-gradient-to-r from-slate-700 to-slate-900 rounded-full z-20 shadow-lg border border-slate-600">
+                      <div className="absolute bottom-0 w-full h-4 bg-cyan-400 rounded-full animate-pulse opacity-80"></div>
+                    </div>
+
+                    <svg width="150" height="150" viewBox="0 0 140 150" className="z-10 overflow-visible drop-shadow-2xl">
+                      <defs>
+                        <clipPath id="flaskInner">
+                          <path d="M 55 20 L 55 60 L 15 130 A 15 15 0 0 0 30 145 L 110 145 A 15 15 0 0 0 125 130 L 85 60 L 85 20 Z" />
+                        </clipPath>
+                        <linearGradient id="flaskShine" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stopColor="rgba(255,255,255,0.9)" />
+                          <stop offset="15%" stopColor="rgba(255,255,255,0.2)" />
+                          <stop offset="85%" stopColor="rgba(255,255,255,0)" />
+                          <stop offset="100%" stopColor="rgba(255,255,255,0.6)" />
+                        </linearGradient>
+                      </defs>
+                      <g clipPath="url(#flaskInner)">
+                        <rect
+                          x="0"
+                          y={145 - ((Number(analyteVol) + Number(addedVol)) * 0.8)}
+                          width="140"
+                          height="150"
+                          fill={currentColor}
+                          style={{ transition: 'fill 0.5s ease-in-out, y 0.2s ease-out' }}
+                        />
+                      </g>
+                      <path d="M 55 20 L 55 60 L 15 130 A 15 15 0 0 0 30 145 L 110 145 A 15 15 0 0 0 125 130 L 85 60 L 85 20"
+                            fill="url(#flaskShine)" stroke="rgba(200, 215, 230, 0.9)" strokeWidth="3" />
+                      <ellipse cx="70" cy="20" rx="18" ry="4" fill="none" stroke="rgba(200, 215, 230, 0.9)" strokeWidth="3" />
+                      <ellipse cx="70" cy="20" rx="15" ry="2" fill="none" stroke="rgba(255, 255, 255, 0.8)" strokeWidth="1" />
+                    </svg>
+
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-8 h-2.5 bg-white rounded-full shadow-[0_2px_4px_rgba(0,0,0,0.5)] z-20 animate-spin"
+                         style={{ animationDuration: isPlaying ? '0.15s' : '1.5s' }} />
+                  </div>
+
+                  <div className="w-56 h-12 bg-gradient-to-b from-slate-300 via-slate-400 to-slate-500 rounded-2xl border-b-4 border-slate-600 shadow-2xl relative flex justify-center items-center mt-[-5px] z-0">
+                    <div className="absolute top-0 w-40 h-3 bg-slate-200 rounded-full opacity-60 mt-1" />
+                    <div className="absolute bottom-2 right-6 w-5 h-5 rounded-full bg-slate-800 border-2 border-slate-300 shadow-md">
+                      <div className="w-1 h-2 bg-white mx-auto mt-0.5 rounded-sm"></div>
+                    </div>
+                    <div className="absolute bottom-2 left-6 w-5 h-5 rounded-full bg-slate-800 border-2 border-slate-300 shadow-md">
+                      <div className="w-1 h-2 bg-white mx-auto mt-0.5 rounded-sm rotate-45"></div>
+                    </div>
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-[8px] font-bold text-slate-700 tracking-widest uppercase opacity-70">
+                      Magnetic Stirrer
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-full lg:w-7/12 p-6 flex flex-col gap-6 bg-white/50">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                  <div className="bg-gradient-to-br from-indigo-50 to-white p-5 rounded-2xl border border-indigo-100 shadow-lg shadow-indigo-100/50 hover:shadow-xl transition-shadow">
+                    <h2 className="font-extrabold text-indigo-900 mb-4 border-b border-indigo-200 pb-2 flex items-center gap-2">
+                      <Settings2 className="w-5 h-5 text-indigo-500" />
+                      Ռեակցիայի Պարամետրեր
+                    </h2>
+                    <div className="space-y-4 text-sm">
+                      <div>
+                        <label className="block text-indigo-800 mb-1 font-semibold">Տիտրման Տեսակը</label>
+                        <select
+                          className="w-full p-2.5 bg-white border border-indigo-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none shadow-sm transition-all"
+                          value={mode}
+                          onChange={(e) => { setMode(e.target.value); handleReset(); }}
+                        >
+                          {Object.values(TITRATION_MODES).map(m => (
+                            <option key={m.id} value={m.id}>{m.name}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-indigo-800 mb-1 font-semibold">Ինդիկատոր</label>
+                        <select
+                          className={`w-full p-2.5 bg-white border rounded-lg outline-none shadow-sm transition-all ${indicatorError ? 'border-red-400 focus:ring-red-500 text-red-700 bg-red-50' : 'border-indigo-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500'}`}
+                          value={indicator}
+                          onChange={(e) => setIndicator(e.target.value)}
+                        >
+                          {Object.values(INDICATORS).map(i => {
+                            const isRec = getRecommendedIndicators(mode).includes(i.id);
+                            return (
+                              <option key={i.id} value={i.id} className={isRec ? 'font-bold text-emerald-600' : ''}>
+                                {i.name} {isRec && i.id !== 'none' ? ' ✅' : ''}
+                              </option>
+                            );
+                          })}
+                        </select>
+                        {indicatorError && indicator !== 'none' && (
+                          <div className="mt-2 text-xs text-red-600 bg-red-100/50 p-2.5 rounded-md border border-red-200 flex items-start gap-1.5 shadow-inner animate-pulse">
+                            <span className="text-sm leading-none mt-0.5">⚠️</span>
+                            <span><strong>Սխալ ինդիկատոր:</strong> Էկվիվալենտության կետը դուրս է այս ինդիկատորի գունային անցման տիրույթից:</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="group">
+                          <label className="block text-indigo-800 mb-1 font-semibold text-xs">Անալիտ (V մլ)</label>
+                          <input type="number" value={analyteVol} onChange={(e) => {setAnalyteVol(e.target.value); handleReset();}}
+                                 className="w-full p-2 bg-white border border-indigo-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm group-hover:border-indigo-400 transition-colors" />
+                        </div>
+                        <div className="group">
+                          <label className="block text-indigo-800 mb-1 font-semibold text-xs">Անալիտ (C Մ)</label>
+                          <input type="number" step="0.01" value={analyteConc} onChange={(e) => {setAnalyteConc(e.target.value); handleReset();}}
+                                 className="w-full p-2 bg-white border border-indigo-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm group-hover:border-indigo-400 transition-colors" />
+                        </div>
+                      </div>
+                      <div className="group">
+                        <label className="block text-indigo-800 mb-1 font-semibold">Տիտրանտի Կոնցենտրացիա (Բյուրետ)</label>
+                        <input type="number" step="0.01" value={titrantConc} onChange={(e) => {setTitrantConc(e.target.value); handleReset();}}
+                               className="w-full p-2.5 bg-white border border-indigo-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm group-hover:border-indigo-400 transition-colors" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-5 rounded-2xl border border-emerald-100 shadow-lg shadow-emerald-100/50 flex flex-col justify-between hover:shadow-xl transition-shadow">
+                    <div>
+                      <h2 className="font-extrabold text-teal-900 mb-4 border-b border-teal-200 pb-2 flex items-center gap-2">
+                        <Beaker className="w-5 h-5 text-teal-600" />
+                        Բյուրետի Կառավարում
+                      </h2>
+                      <div className="mb-5 bg-white p-3 rounded-xl shadow-sm border border-teal-100">
+                        <div className="flex justify-between text-sm text-teal-800 mb-2 font-bold">
+                          <span>Ավելացված ծավալ:</span>
+                          <span className="text-teal-600 text-lg">{addedVol.toFixed(2)} մլ</span>
+                        </div>
+                        <div className="w-full bg-slate-200 rounded-full h-3 overflow-hidden shadow-inner">
+                          <div className="bg-gradient-to-r from-teal-400 to-blue-500 h-full rounded-full transition-all duration-300 relative" style={{ width: `${(addedVol/50)*100}%` }}>
+                            <div className="absolute top-0 left-0 w-full h-full bg-white/20 animate-pulse"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mb-6">
+                        <label className="block text-teal-800 mb-2 text-sm font-bold">Հոսքի արագություն</label>
+                        <div className="flex gap-2 p-1 bg-white rounded-lg shadow-sm border border-teal-100">
+                          <button onClick={() => setFlowRate(0.05)} className={`flex-1 py-1.5 rounded-md text-sm font-medium transition-all ${flowRate === 0.05 ? 'bg-gradient-to-r from-teal-400 to-teal-500 text-white shadow-md' : 'text-slate-600 hover:bg-teal-50'}`}>Դանդաղ</button>
+                          <button onClick={() => setFlowRate(0.2)} className={`flex-1 py-1.5 rounded-md text-sm font-medium transition-all ${flowRate === 0.2 ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md' : 'text-slate-600 hover:bg-teal-50'}`}>Միջին</button>
+                          <button onClick={() => setFlowRate(0.5)} className={`flex-1 py-1.5 rounded-md text-sm font-medium transition-all ${flowRate === 0.5 ? 'bg-gradient-to-r from-emerald-500 to-green-500 text-white shadow-md' : 'text-slate-600 hover:bg-teal-50'}`}>Արագ</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <button
+                        onClick={handleAddDrop}
+                        disabled={isPlaying || addedVol >= 50}
+                        className="flex items-center justify-center gap-2 bg-white text-blue-600 border-2 border-blue-200 hover:border-blue-400 hover:bg-blue-50 py-3 rounded-xl font-bold transition-all disabled:opacity-50 hover:-translate-y-1 hover:shadow-lg"
+                      >
+                        <Droplet className="w-5 h-5 fill-current" /> 1 Կաթիլ
+                      </button>
+                      {isPlaying ? (
+                        <button onClick={() => setIsPlaying(false)} className="flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-rose-600 text-white hover:from-red-600 hover:to-rose-700 py-3 rounded-xl font-bold transition-all shadow-md shadow-red-200 hover:-translate-y-1 hover:shadow-lg">
+                          <Square className="w-5 h-5 fill-current" /> Կանգառ
+                        </button>
+                      ) : (
+                        <button onClick={() => setIsPlaying(true)} disabled={addedVol >= 50} className="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 py-3 rounded-xl font-bold transition-all shadow-md shadow-teal-200 disabled:opacity-50 hover:-translate-y-1 hover:shadow-lg">
+                          <Play className="w-5 h-5 fill-current" /> Հոսք
+                        </button>
+                      )}
+                      <button onClick={handleReset} className="col-span-2 flex items-center justify-center gap-2 bg-slate-800 text-white hover:bg-slate-700 py-3 rounded-xl font-bold transition-all shadow-md hover:-translate-y-1 hover:shadow-lg mt-1">
+                        <RotateCcw className="w-5 h-5" /> Վերսկսել Փորձը
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white border-2 border-slate-100 rounded-2xl p-5 shadow-xl flex-1 flex flex-col relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+                  <h2 className="font-extrabold text-slate-800 mb-3 flex justify-between items-center z-10">
+                    <span>Տիտրման Կոր (pH / Ծավալ)</span>
+                    <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs animate-pulse font-bold shadow-sm border border-indigo-200">
+                      Էկվիվալենտ կետ ≈ {((analyteVol * analyteConc) / titrantConc).toFixed(1)} մլ
+                    </span>
+                  </h2>
+                  <div className="flex-1 min-h-[280px] bg-[#f8fafc] border border-slate-200 rounded-xl flex items-center justify-center overflow-hidden relative shadow-inner">
+                    <svg width="100%" height="100%" viewBox={`0 0 ${svgWidth} ${svgHeight}`} preserveAspectRatio="none" className="overflow-visible">
+
+                      {[...Array(15)].map((_, i) => (
+                        <g key={`h-${i}`}>
+                          <line x1={margin.left} y1={margin.top + (i * graphHeight / 14)} x2={svgWidth - margin.right} y2={margin.top + (i * graphHeight / 14)}
+                                stroke={i % 2 === 0 ? "#cbd5e1" : "#e2e8f0"} strokeWidth={i % 2 === 0 ? "1.5" : "0.5"} />
+                          {i % 2 === 0 && (
+                            <text x={margin.left - 8} y={margin.top + graphHeight - (i / 14) * graphHeight + 4} textAnchor="end" fontSize="10" fill="#475569" fontWeight="bold">
+                              {i}
+                            </text>
+                          )}
+                        </g>
+                      ))}
+
+                      {[...Array(11)].map((_, i) => (
+                        <g key={`v-${i}`}>
+                          <line x1={margin.left + (i * graphWidth / 10)} y1={margin.top} x2={margin.left + (i * graphWidth / 10)} y2={svgHeight - margin.bottom}
+                                stroke={i % 2 === 0 ? "#cbd5e1" : "#e2e8f0"} strokeWidth={i % 2 === 0 ? "1.5" : "0.5"} />
+                          <line x1={margin.left + (i * graphWidth / 10)} y1={svgHeight - margin.bottom} x2={margin.left + (i * graphWidth / 10)} y2={svgHeight - margin.bottom + (i%2===0?6:3)}
+                                stroke="#475569" strokeWidth="1.5" />
+                          {i % 2 === 0 && (
+                            <text x={margin.left + (i * graphWidth / 10)} y={svgHeight - margin.bottom + 18} textAnchor="middle" fontSize="11" fill="#475569" fontWeight="bold">
+                              {i * 5}
+                            </text>
+                          )}
+                        </g>
+                      ))}
+
+                      {indicator !== 'none' && getIndicatorBand(indicator) && (
+                        <g className="transition-opacity duration-1000" style={{ opacity: addedVol > 0 ? 1 : 0.5 }}>
+                          <rect
+                            x={margin.left}
+                            y={margin.top + graphHeight - (getIndicatorBand(indicator).max / 14) * graphHeight}
+                            width={graphWidth}
+                            height={((getIndicatorBand(indicator).max - getIndicatorBand(indicator).min) / 14) * graphHeight}
+                            fill={getIndicatorBand(indicator).color}
+                            className="animate-pulse"
+                            style={{ animationDuration: '3s' }}
+                          />
+                          <text
+                            x={svgWidth - margin.right - 5}
+                            y={margin.top + graphHeight - (getIndicatorBand(indicator).max / 14) * graphHeight + 12}
+                            textAnchor="end"
+                            fontSize="10"
+                            fill="#334155"
+                            fontWeight="bold"
+                            opacity="0.9"
+                          >
+                            {INDICATORS[indicator].name.split(' ')[0]} ({getIndicatorBand(indicator).label})
+                          </text>
+                        </g>
+                      )}
+
+                      <line x1={margin.left} y1={margin.top} x2={margin.left} y2={svgHeight - margin.bottom} stroke="#334155" strokeWidth="2.5" strokeLinecap="round" />
+                      <line x1={margin.left} y1={svgHeight - margin.bottom} x2={svgWidth - margin.right} y2={svgHeight - margin.bottom} stroke="#334155" strokeWidth="2.5" strokeLinecap="round" />
+
+                      <text x={12} y={margin.top + graphHeight / 2} transform={`rotate(-90 12,${margin.top + graphHeight / 2})`} textAnchor="middle" fontSize="13" fill="#1e293b" fontWeight="extrabold">pH Արժեք</text>
+                      <text x={margin.left + graphWidth / 2} y={svgHeight - 12} textAnchor="middle" fontSize="13" fill="#1e293b" fontWeight="extrabold">Ավելացված Ծավալ (մլ)</text>
+
+                      {dataPoints.length > 1 && (
+                        <polyline
+                          points={pointsString}
+                          fill="none"
+                          stroke="url(#lineGradient)"
+                          strokeWidth="3.5"
+                          strokeLinejoin="round"
+                          strokeLinecap="round"
+                          filter="drop-shadow(0px 3px 2px rgba(99, 102, 241, 0.4))"
+                        />
+                      )}
+
+                      {dataPoints.length > 0 && (
+                        <g transform={`translate(${margin.left + (addedVol / 50) * graphWidth}, ${margin.top + graphHeight - (currentPH / 14) * graphHeight})`}>
+                          <circle cx="0" cy="0" r="6" fill="#ef4444" stroke="#fff" strokeWidth="2" className="drop-shadow-md" />
+                          <circle cx="0" cy="0" r="12" fill="#ef4444" opacity="0.3" className="animate-ping" />
+                        </g>
+                      )}
+
+                      <defs>
+                        <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stopColor="#8b5cf6" />
+                          <stop offset="50%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#06b6d4" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <button
+              onClick={() => setIsAiOpen(true)}
+              className={`fixed bottom-6 right-6 p-4 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-[0_10px_25px_rgba(167,139,250,0.5)] hover:scale-110 transition-transform duration-300 z-50 flex items-center gap-2 group ${isAiOpen ? 'hidden' : 'flex'}`}
+            >
+              <Bot className="w-6 h-6 animate-bounce" />
+              <span className="font-bold hidden group-hover:inline-block truncate transition-all overflow-hidden max-w-[200px]">AI Պրոֆեսոր</span>
+              <Sparkles className="w-4 h-4 text-fuchsia-200 absolute top-2 right-2 animate-pulse" />
+            </button>
+
+            <div className={`fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white/95 backdrop-blur-xl shadow-[-10px_0_30px_rgba(0,0,0,0.1)] z-50 transform transition-transform duration-500 flex flex-col border-l border-violet-100 ${isAiOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+              <div className="bg-gradient-to-r from-violet-600 to-fuchsia-600 p-5 text-white flex justify-between items-center rounded-bl-2xl shadow-md">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-white/20 rounded-lg">
+                    <Bot className="w-6 h-6" />
+                  </div>
+                  <h2 className="font-bold text-lg">✨ AI Պրոֆեսոր</h2>
+                </div>
+                <button onClick={() => setIsAiOpen(false)} className="p-1 hover:bg-white/20 rounded-full transition-colors">
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-4">
+                {!aiResponse && !aiLoading && (
+                  <div className="bg-violet-50 p-4 rounded-xl border border-violet-100 text-violet-800 text-sm shadow-sm">
+                    Ողջու՜յն: Ես ձեր վիրտուալ AI Պրոֆեսորն եմ, որն աշխատում է հզոր <strong>Gemini</strong> մոդելի հիմքի վրա: Ինչպե՞ս կարող եմ օգնել ձեզ տիտրման այս փորձի հարցում:
+                  </div>
+                )}
+                <button
+                  onClick={handleGenerateReport}
+                  disabled={aiLoading}
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-2 border-indigo-200 rounded-xl font-bold transition-all disabled:opacity-50 hover:shadow-md"
+                >
+                  <FileText className="w-5 h-5" /> ✨ Գեներացնել Հաշվետվություն
+                </button>
+                {(aiResponse || aiLoading) && (
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-inner flex-1 overflow-y-auto mt-2">
+                    {aiLoading && !aiResponse ? (
+                      <div className="flex flex-col items-center justify-center h-full text-slate-500 gap-3">
+                        <div className="w-8 h-8 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
+                        <span className="text-sm font-medium animate-pulse">Gemini-ն վերլուծում է տվյալները...</span>
+                      </div>
+                    ) : (
+                      <div className="text-slate-700">
+                        {formatAiText(aiResponse)}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+              <div className="p-4 border-t border-slate-200 bg-slate-50">
+                <div className="relative flex items-center">
+                  <input
+                    type="text"
+                    value={aiQuery}
+                    onChange={(e) => setAiQuery(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleAskQuestion()}
+                    placeholder="Հարցրեք փորձի վերաբերյալ..."
+                    className="w-full pl-4 pr-12 py-3 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 shadow-sm"
+                  />
+                  <button
+                    onClick={handleAskQuestion}
+                    disabled={aiLoading || !aiQuery.trim()}
+                    className="absolute right-2 p-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg transition-colors disabled:bg-slate-300"
+                  >
+                    <Send className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+
+    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-image u-shading u-footer" id="sec-6c0d" data-image-width="852" data-image-height="502"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">Կենսագիտության և ընդհանուր քիմիայի ամբիոն,&nbsp;<br>Հայաստանի Ազգային Ագրարային Համալսարան
+        </p>
+        <p class="u-align-center u-text u-text-2">Հեռախոս: <a href="tel:+37493433336" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">+374 93 433336</a>
+          <br>WhatsApp: <a href="https://api.whatsapp.com/send?phone=37493433336" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">+374 93 433336</a>
+        </p>
+        <p class="u-align-center u-text u-text-custom-color-2 u-text-3">
+          <span class="u-text-white" style="font-style: normal;">Email:&nbsp;</span>
+          <a href="mailto:contacts@esbnyc.com">contact@qimia.am</a>
+        </p>
+        <p class="u-align-center u-text u-text-white u-text-4">
+          <span style="font-style: normal;">Facebook:&nbsp;</span>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://www.facebook.com/qimia.am" target="_blank">facebook.com/qimia.am</a>
+        </p>
+      </div></footer>
+  
+</body>
+</html>
